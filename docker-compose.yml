@@ -1,0 +1,24 @@
+# to run the images, we need to run big commans like below
+
+version: '3'
+services:
+  web:
+    #build: .
+    build:
+      context: . # from where fall ile and folder thsi image to pull from, (in this exm its all  file and folder form wkdir)
+      dockerfile: Dockerfile.dev # location of docker file to construct the image, look into current working dir and run dockerfile.dev to create image.
+    ports:
+      - "3001:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+# Create a 2nd service to run test
+  test:
+    #build: .
+    build:
+      context: . # from where fall ile and folder thsi image to pull from, (in this exm its all  file and folder form wkdir)
+      dockerfile: Dockerfile.dev 
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm","run","test"]
