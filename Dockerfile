@@ -1,4 +1,6 @@
 
+# Docker file for Production version of build 
+
 # Step - 1 Build the project 
 #Creating tag/name for this phase)
 FROM node:alpine as builder

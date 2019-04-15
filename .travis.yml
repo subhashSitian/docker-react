@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_intsall:
+  - docker build -t subhashSitian/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run subhashSitian/docker-react npm run test -- --coverage
