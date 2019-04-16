@@ -15,7 +15,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            This React Application , Runing ion AWS Docker Container..! 
+            This React Application , Runing ion AWS Docker Container....! 
           </a>
         </header>
       </div>
