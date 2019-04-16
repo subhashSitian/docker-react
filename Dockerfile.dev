@@ -9,5 +9,5 @@ RUN npm install
 
 # [ with volumn set using compose file, which will be looking into local file in our system (refernce) so this copy of code is not needed , #even copied still  image will refer to local file system]
 COPY . .  
-Expose 80
+
 CMD ["npm","run","start"]
